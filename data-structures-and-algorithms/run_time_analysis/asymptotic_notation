@@ -1,0 +1,29 @@
+Asymptotic notation ( how fast a function grows with the input size )
+
+* Big Theta ->  Asymptotically TIGHT bound
+
+For example, the worst csase running time of binary search is Theta ( log_a n )
+
+Θ(1)
+Θ ( log ⁡ 2 n )
+Θ(n)
+Θ ( n log ⁡ 2 n )
+Θ(n^2 )
+Θ ( n^2 log ⁡ 2 n )
+Θ ( n^3 )
+Θ ( 2^n )
+Θ ( n! )
+
+* Big O ( O ) - How the run time increases ( represents the worst case )
+
+- "the running time grows at most this much, but it could grow more slowly"
+- We use big-O notation for asymptotic UPPER bounds
+- Big-O notation gives only an asymptotic upper bound, and not an asymptotically tight bound
+
+* Big Omega notation
+
+- When we want to say that an algorithm takes at least a certain amount of time, we use big omega
+- We use big omega notation for asymptotic LOWER bounds
+
+
+Selection sort is O(n^2)
