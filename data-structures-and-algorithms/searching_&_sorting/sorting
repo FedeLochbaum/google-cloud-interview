@@ -1,0 +1,44 @@
+                 |      Best                  |      Average           |      Worst             |      Worst in space  |
+
+Comparison based sorting algorithms
+
+These two are recursively or using Divide and Conquer
+
+- Quicksort      |      Theta( n log n )      |      O( n log n )      |      O( n^2 )          |      O( log n )      |
+- Mergesort      |      Theta( n log n )      |      O( n log n )      |      O( n log n )      |      n               |
+
+- Timsort        |      Theta( n )            |      O( n log n )      |      O( n log n )      |      n               |
+- Heapsort       |      Theta( n log n )      |      O( n log n )      |      O( n log n )      |      O( 1 )          |
+
+These three algorithms are easy to implement but the have O ( n^2 )
+
+- Bubblesort     |      Theta( n )            |      O( n^2 )          |      O( n^2 )          |      O( 1 )          |
+- Insertionsort  |      Theta( n )            |      O( n^2 )          |      O( n^2 )          |      O( 1 )          |
+- Selectionsort  |      Theta( n^2 )          |      O( n^2 )          |      O( n^2 )          |      O( 1 )          |
+
+- Treesort       |      Theta( n log n )      |      O( n log n )      |      O( n^2 )          |      O( n )          |
+- Shellsort      |      Theta( n log n )      |      O( n (log n)^2 )  |      O( n (log n)^2 )  |      O( 1 )          |
+- Bucketsort     |      Theta( n + k )        |      O( n + k )        |      O( n^2 )          |      O( n )          |
+
+Not comparison based sorting algorithms
+
+- Radixsort      |      Theta( n k )          |      O( n k )          |      O( n k )          |      O( n + k )      |
+- Countingsort   |      Theta( n + k )        |      O( n + k )        |      O( n + k )        |      O( k )          |
+- Cubesort       |      Theta( n )            |      O( n log n )      |      O( n log n )      |      O( n )          |
+
+
+DEFINITIONS:
+
+- in-place sorting algorithm: if it requires only a constant amount (i.e., O(1)) of extra space during the sorting process.
+  - Mergesort is not an in-place algorithm
+- stable: if the relative order of elements with the same key value is preserved by the algorithm after sorting is performed
+
+
+- Which of these algorithms run in O(N log N) on any input array of size N?
+  - Merge Sort
+- Which of these algorithms has worst case time complexity of Θ(N^2) for sorting N integers?
+  - Selection Sort
+  - Bubble Sort
+  - Insertion Sort
+  
+More data: https://visualgo.net/training?diff=Medium&n=7&tl=0&module=sorting

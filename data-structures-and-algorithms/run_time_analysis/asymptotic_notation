@@ -16,6 +16,8 @@ For example, the worst csase running time of binary search is Theta ( log_a n )
 
 * Big O ( O ) - How the run time increases ( represents the worst case )
 
+Mathematically, an algorithm A is of O(f(n)) if there exist a constant k and a positive integer n0 such that algorithm A requires no more than k*f(n) time units to solve a problem of size n ≥ n0, i.e., when the problem size is larger than n0, then algorithm A is (always) bounded from above by this simple formula k*f(n).
+
 - "the running time grows at most this much, but it could grow more slowly"
 - We use big-O notation for asymptotic UPPER bounds
 - Big-O notation gives only an asymptotic upper bound, and not an asymptotically tight bound
