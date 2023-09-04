@@ -8,6 +8,7 @@ class LinkedList:
     self.head = None
     self.last = None
   
+  # O(1)
   def append(self, value):
     new_node = Node(value)
     if not self.head:
@@ -18,11 +19,15 @@ class LinkedList:
     self.last.next = new_node
     self.last = new_node
 
+  # O(1)
+  def peek(self): return self.head.value
+
   def prepend(self, value):
     new_node = Node(value)
     new_node.next = self.head
     self.head = new_node
 
+  # O(n)
   def delete(self, value):
     if not self.head: return
 

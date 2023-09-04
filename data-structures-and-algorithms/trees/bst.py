@@ -4,6 +4,7 @@ class Node:
     self.right = None
     self.val = val
 
+  # O(log n) , # O(n) worst case, when is not balanced
   def insert(self, val):
     if (self.val < val): self.insert_to_right(val); return
 
@@ -19,6 +20,7 @@ class Node:
   
     self.left.insert(val)
 
+  # O(log n), # O(n) worst case, when is not balanced
   def search(self, val):
     if self.val == val: return self
 
@@ -26,6 +28,7 @@ class Node:
 
     return None if self.left == None else self.left.search(val)
 
+  # O(log n) , # O(n) worst case, when is not balanced
   def delete(self, val):
     if self.val < val:
       self.right = self.right.delete(val)
