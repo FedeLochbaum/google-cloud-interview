@@ -1,0 +1,27 @@
+Advices:
+  - Think out loud
+  - Ask clarification questions
+  - Explain your thoughts
+  - Fundamentals, use code in a white board, you don't have tools to guide your thoughts 
+  - Know pretty well the common data structures
+  - You can do it :) <3
+
+
+
+The most common plan I see to solving interview problems looks something like the following:
+
+1) Look at the problem
+2) Think about the problem
+3) Come up with a solution
+4) Write the solution
+5) Success
+
+[0:00–0:05] Get settled and make sure that you fully understand the problem they’re asking
+[0:05–0:10] Figure out a brute force solution to the problem. No coding at this point, just talk through it and draw any pictures if you find that helpful
+[0:10–0:15] Optimize your solution. Take these 5 minutes to figure out the absolute best solution you can in this period of time.
+[0:15–0:35] Code up your solution. Even if it’s not optimal, it is better to have a complete, non-optimal solution than an incomplete, optimal solution.
+[0:35–0:50] Test your code and fix any issues. This is incredibly important. It doesn’t matter if your code isn’t perfect the first time, but you had better be able to identify the errors.
+
+Use abstraction to your advantage
+
+Test your code
