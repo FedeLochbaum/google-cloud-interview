@@ -46,7 +46,7 @@
 # [1 2 3 4] Len = 4
 # (1 2)
 
-def solve(tournament):
+def solve(tournament): # O( log n )
   while(len(tournament) > 1):
     _len = len(tournament) # len is the maximum
     winners = []
