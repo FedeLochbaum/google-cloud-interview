@@ -11,7 +11,6 @@
 
 # Given the following three iterators put into an array of iterators…
 
-
 class CachedIterator:
   __slots__ = ["_it", "_next", "_sentinel"]
 
