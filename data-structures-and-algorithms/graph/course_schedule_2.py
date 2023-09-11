@@ -33,3 +33,38 @@
 # 0 <= ai, bi < numCourses
 # ai != bi
 # All the pairs [ai, bi] are distinct.
+
+# prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai
+
+# b_i -> a_i, ex: [0, 1] -> 1 -> 0
+
+# Return the ordering of courses you should take to finish all courses
+
+# NOTE: basically, we have to create a graph linking b_i -> a_i, and do BFS order to find a valid path
+from collections import defaultdict, deque
+
+# Topological sort ( DAG )
+def find_order(count, dependencies):
+  graph = graph = defaultdict(list); needed = [0] * count; order = []
+
+  for course, dependency in dependencies:
+    graph[dependency].append(course); needed[course] += 1
+
+  queue = deque([c for c in range(count) if needed[c] == 0]) # possible starting points
+
+  while queue: # BFS
+    course = queue.popleft()
+    order.append(course)
+
+    # Decrease the needed of neighboring courses
+    for neighbor in graph[course]:
+      needed[neighbor] -= 1
+      if needed[neighbor] == 0: queue.append(neighbor) # Having taking course, now we add to the queue all the unlocked courses
+
+  return order if len(order) == count else []
+
+print(find_order(2, [[1, 0]])) # [0, 1]
+print(find_order(4, [[1, 0],[2, 0],[3, 1],[3, 2]])) # [0, 2, 1, 3]
+print(find_order(1, [])) # [0]
+
+
