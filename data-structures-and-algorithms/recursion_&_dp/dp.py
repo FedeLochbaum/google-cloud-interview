@@ -16,16 +16,16 @@ def fib(n):
   return fib(n-1) + fib(n-2)
 
 # Using memo
-# Space complexity: O(n)
-def fib(n, memo):
+# Space complexity: O(n), In the worst case O(2^n), else O(n)
+def fib_top_down(n, memo):
   if n <= 1: return n
 
   if not n in memo: memo[n] = fib(n-1, memo) + fib(n-2, memo)
 
   return memo[n]
 
-# Iterative
-def fib_it(n):
+# Iterative # O(n * m) with m the time complexity of solve a subproblem, in general, 1
+def fib_bottom_up(n):
   if n <= 1: return n
   
   fib = [0] * (n + 1)

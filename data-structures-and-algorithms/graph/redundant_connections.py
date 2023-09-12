@@ -54,11 +54,11 @@
 class UnionFind:
   def __init__(self, n): self.parent = list(range(n))
   
-  def find(self, x):
+  def find(self, x): # O(log n), O(1) in average
     if self.parent[x] != x: self.parent[x] = self.find(self.parent[x])
     return self.parent[x]
   
-  def union(self, x, y):
+  def union(self, x, y): # O(1) amortized
     root_x = self.find(x)
     root_y = self.find(y)
     if root_x != root_y:
@@ -69,7 +69,7 @@ def find_redundant_edges(edges):
   set = UnionFind(n + 1)
   redundant_edge = None
 
-  for u, v in edges:
+  for u, v in edges: # u <-> v
     if set.find(u) == set.find(v): redundant_edge = [u, v]
     else: set.union(u, v)
 
