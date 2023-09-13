@@ -1,0 +1,16 @@
+# There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.
+
+# If an egg is dropped from that floor (N) or above (N+1, N+2, …), it will break.
+# If it is dropped from any floor below (N-1, N-2, …), it will not break and you can drop the egg again.
+# Given two eggs 🥚🥚, find the floor (N) an egg can be dropped from without breaking in minimum number of drops.
+
+# 2 Eggs and 100 Floors Problem
+# The question is, What strategy should you adopt to minimize the number egg drops it takes to find the solution?. (And what is the worst case for the number of drops it will take?)
+
+# Think about the problem for a few minutes, and then read on.
+
+# Idea 1
+# Binary search, narrowing the search space but we would need to drop log_2 100 times
+
+# And dropping only an egg we may just cut the search space to the middle, after that we just can drop from 1 to 50
+
