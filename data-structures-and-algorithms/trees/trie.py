@@ -18,8 +18,8 @@ class Trie:
   def search(self, word):
     curr = self.root
     for c in word:
-        if c not in curr.children: return False
-        curr = curr.children[c]
+      if c not in curr.children: return False
+      curr = curr.children[c]
 
     return curr.is_word
 
